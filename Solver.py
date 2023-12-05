@@ -57,7 +57,7 @@ def lp_solver(fine):
 
     # constraints for fine
     constraint_13 = x_5 - m <= m*(1-x_13)
-    constraint_14 = x_5 <= m*x_13
+    constraint_14 = x_5-499 <= m*x_13
 
     # more or equal caustic soda (x_7) than ammonia (x_1) 
     constraint_23 = x_7 >= x_1
@@ -96,7 +96,7 @@ def lp_solver(fine):
 def fine():
     
     step_size = 1
-    fine = 37400
+    fine = 10000
 
     while True:
         print(fine)

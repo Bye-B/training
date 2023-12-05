@@ -32,7 +32,7 @@ def lp_solver(fine):
 def fine():
     
     step_size = 1
-    fine = 37400
+    fine = 10000
 
     while True:
         fine += step_size
