@@ -1,20 +1,16 @@
 from abc import ABC
-from mrjob . job import MRJob
+from mrjob.job import MRJob
 
-class Count (MRJob, ABC) :
+class Count (MRJob, ABC):
     
-    def mapper (self ,_ , line) :
-        for word in line.split() :
-            print(word)
+    def mapper (self ,_ , line):
+        for word in line.split():
             yield word , 1
 
-    def reducer(self , word , counts ) :
-        print(word, sum(counts))
-        print("hi")
+    def reducer(self , word , counts ):
         yield word , sum(counts)
 
-    def run(self):
-        self.mapper(self,)
 
-if __name__ == ' main ' :
+if __name__ == ' main ':
     Count.run()
+    
